@@ -1,11 +1,10 @@
 package com.company;
 
 
-
-
 public class Main {
     static Node root, current;
     static int identFlag = 0;
+
     public static void addNode(int value) {
         if (root != null) {
             if (root.value > value) {
@@ -52,7 +51,7 @@ public class Main {
             return false;
         }
         if (identFlag != 0) return true;
-        else{
+        else {
             return false;
         }
     }
@@ -64,11 +63,12 @@ public class Main {
         if (node.right != null) {
             countaint(num, node.right);
         }
-        if(num == node.value) {
+        if (num == node.value) {
             identFlag++;
         }
     }
-    static int count(int num){
+
+    static int count(int num) {
         identFlag = 0;
         countaint(num);
         return identFlag;
